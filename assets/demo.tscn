@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://3g8oaekm0h1k"]
+
+[ext_resource type="Script" uid="uid://dysuclxalaecx" path="res://assets/demo.gd" id="1_amuei"]
+[ext_resource type="PackedScene" uid="uid://dftxuxkv4bk1n" path="res://assets/blockman_j.tscn" id="1_s02n5"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xrivr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_13qdw"]
+
+[node name="Node3D" type="Node3D" unique_id=422205166]
+script = ExtResource("1_amuei")
+
+[node name="blockman_j" parent="." unique_id=1688025595 instance=ExtResource("1_s02n5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34340954, 1.437707, -0.10180426)
+
+[node name="blockman_j2" parent="." unique_id=1488326338 instance=ExtResource("1_s02n5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.160807, 1.437707, -0.10180426)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1005112841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5124006, 2.6726437, 5.376585)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D" unique_id=2008234964]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1943407, 5.546771, -6.043646)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1899176517]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1563234663]
+transform = Transform3D(47.51884, 0, 0, 0, 3.7681394, 0, 0, 0, 18.305828, -0.9013715, 4.7683716e-07, 1.3340931)
+mesh = SubResource("PlaneMesh_xrivr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1137996090]
+shape = SubResource("BoxShape3D_13qdw")
